@@ -4,14 +4,15 @@ nodes
 etcd
 
 [masters]
-192.168.122.119 openshift_ip=192.168.122.119 openshift_schedulable=true 
+172.16.12.64 openshift_ip=172.16.12.64 openshift_schedulable=true 
 
 [etcd]
-192.168.122.119 openshift_ip=192.168.122.119
+172.16.12.64 openshift_ip=172.16.12.64
 
 [nodes]
-192.168.122.119 openshift_ip=192.168.122.119 openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
-192.168.122.236 openshift_ip=192.168.122.236 openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+172.16.12.64 openshift_ip=172.16.12.64 openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+172.16.12.54 openshift_ip=172.16.12.54 openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+172.16.12.57 openshift_ip=172.16.12.57 openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
 
 [OSEv3:vars]
 ansible_ssh_user=root

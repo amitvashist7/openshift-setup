@@ -7,10 +7,9 @@ export USERNAME=${USERNAME:="$(whoami)"}
 export PASSWORD=${PASSWORD:=password}
 export VERSION=${VERSION:="v3.7.0"}
 
-export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/gshipley/installcentos/master"}
+#export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/gshipley/installcentos/master"}
 
-export IP="192.168.122.119"
-export IP2="192.168.122.236"
+export IP="172.16.12.64"
 
 echo "******"
 echo "* Your domain is $DOMAIN "
@@ -41,10 +40,12 @@ cd openshift-ansible && git fetch && git checkout release-3.7 && cd ..
 cat <<EOD > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-192.168.122.119		openshift.example.com openshift
-192.168.122.119		console.example.com console
-192.168.122.119		apps.example.com apps
-192.168.122.236		node.example.com node
+172.16.12.64   master.example.com		master
+172.16.12.64   console.example.com		console
+#127.0.0.1   console.example.com		console
+172.16.12.64   registry-console-default.apps.example.com 	registry-console
+172.16.12.54   node01.example.com		node01
+172.16.12.57   node02.example.com		node02
 EOD
 
 
